@@ -250,19 +250,22 @@ img {
   width: 100%;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-family: 'Cormorant SC', serif;
   text-transform: uppercase;
-  font-size: 10rem;
   text-shadow: 3px 3px 10px white;
+}
+
+h1 {
+  font-size: 10rem;
   color: #bbbbbb;
 }
 
-h2 {
-  font-family: 'Cormorant SC', serif;
-  text-transform: uppercase;
+h2,
+h3 {
   font-size: 6rem;
-  text-shadow: 3px 3px 10px white;
   color: white;
 }
 
@@ -277,7 +280,7 @@ p {
   font-family: 'Cormorant SC', serif;
   font-size: 3.5rem;
   color: whitesmoke;
-  text-decoration: underline;
+  border: 3px solid whitesmoke;
 }
 
 button {
@@ -288,27 +291,33 @@ button {
 body {
   background-image: url(../assets/bodyBackground.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   height: 100vh;
 }
 
-img {
+img,
+button {
   -webkit-box-shadow: 3px 3px 20px white;
           box-shadow: 3px 3px 20px white;
 }
 
 button {
   margin-bottom: 20%;
-  text-shadow: 3px 3px 10px white;
+  text-shadow: 1px 1px 5px black;
   border: none;
-  background-color: #949494;
+  background-color: #680000;
+  color: whitesmoke;
   border-radius: 5px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
 }
 
 button:hover, button:focus {
-  background-color: whitesmoke;
+  background-color: #616161;
   cursor: pointer;
+}
+
+button:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .body {
@@ -327,16 +336,15 @@ button:hover, button:focus {
 }
 
 .creatureImage {
-  width: 50%;
+  width: 45%;
 }
 
 .playArea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
 }
 
@@ -348,4 +356,67 @@ button:hover, button:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.homeBtn {
+  margin-top: 5%;
+  background-color: #949494;
+  width: 25%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.energy {
+  text-align: center;
+}
+
+@media (max-width: 1150px) {
+  h1 {
+    text-align: center;
+    font-size: 8rem;
+  }
+  h3 {
+    font-size: 6rem;
+  }
+  body {
+    background-size: auto;
+  }
+  .startBtn {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 760px) {
+  h1,
+  h3 {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .intro {
+    overflow-y: scroll;
+    height: 50vh;
+  }
+  .playArea {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .creatureImage {
+    width: 100%;
+  }
+  .energy p {
+    font-size: 3rem;
+  }
+  button {
+    margin-bottom: 10%;
+    font-size: 3.5rem;
+  }
+  .homeBtn {
+    width: 80%;
+    margin-top: 50px;
+  }
+  .endMessage {
+    text-align: center;
+  }
 }

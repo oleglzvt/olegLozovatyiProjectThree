@@ -1,14 +1,18 @@
 $(document).ready(function(){
-
     // energy variable
     let energy = 100;
     $('.energy').html(`<p>Your Energy: ${energy}%</p>`);
-
-
+    
     // start and play again buttons functionality
     $('.startBtn').on('click', function(e){
         e.preventDefault();
         window.location.href = './gamePage.html';
+    })
+
+    // home button functionality
+    $('.homeBtn').on('click', function(e){
+        e.preventDefault();
+        window.location.href = './index.html';
     })
 
     // hide all the creatures
@@ -27,7 +31,6 @@ $(document).ready(function(){
 
     // creature functionality
     let index = 0;
-
     const displayCreature = (index) => {
         $(creatures[index]).show();
         $(creatures[index - 1]).hide();
@@ -41,8 +44,7 @@ $(document).ready(function(){
             if (index === creatures.length + 1 && energy > 0) {
                 window.location.href = './winPage.html';
             }
-        }, 1000);
-        
+        }, 800);
     })
     
     // wrong answer functionality
@@ -50,15 +52,15 @@ $(document).ready(function(){
         energy -= 50;
         $('.energy').html(`<p>Your Energy: ${energy}%</p>`);
         setTimeout(function() {
-            displayCreature(index++);
             if (energy === 0) {
                 window.location.href = './losePage.html';
             } else {
                 displayCreature(index++);
             }
-            if (index === creatures.length + 1 && energy > 0) {
+            if (index === creatures.length + 1 && energy >= 0) {
                 window.location.href = './winPage.html';
             }
-        }, 1000);
+        }, 800);
     })
+
 });

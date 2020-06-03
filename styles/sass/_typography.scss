@@ -1,19 +1,22 @@
 // font-family: 'Architects Daughter', cursive;
 // font-family: 'Cormorant SC', serif;
 
-h1 {
+h1,
+h2,
+h3 {
     font-family: 'Cormorant SC', serif;
     text-transform: uppercase;
-    font-size: 10rem;
     text-shadow: 3px 3px 10px white;
+}
+
+h1 {
+    font-size: 10rem;
     color: rgb(187, 187, 187);
 }
 
-h2 {
-    font-family: 'Cormorant SC', serif;
-    text-transform: uppercase;
+h2,
+h3 {
     font-size: 6rem;
-    text-shadow: 3px 3px 10px white;
     color: rgb(255, 255, 255);
 }
 
@@ -28,7 +31,8 @@ p {
     font-family: 'Cormorant SC', serif;
     font-size: 3.5rem;
     color: whitesmoke;
-    text-decoration: underline;
+    border: 3px solid whitesmoke;
+    // background-color: rgba(0,0,0,.7);
 }
 
 button {
