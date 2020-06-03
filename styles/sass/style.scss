@@ -1,9 +1,50 @@
 @import 'setup';
+@import 'typography';
+@import 'colors';
 
-h1 {
-    color: red;
+body {
+    background-image: url(../assets/bodyBackground.jpg);
+    background-size: cover;
+    height: 100vh;
 }
 
 img {
-    width: 300px;
+    box-shadow: 3px 3px 20px white;
 }
+
+button {
+    margin-bottom: 20%;
+    text-shadow: 3px 3px 10px white;
+    border: none;
+    background-color: rgb(148, 148, 148);
+    border-radius: 5px;
+    transition: all .3s;
+        &:hover,
+        &:focus {
+            background-color: whitesmoke;
+            cursor: pointer;
+        }
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.creatureImage {
+    width: 50%;
+}
+
+.playArea {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.answerButtons {
+    display: flex;
+    flex-direction: column;
+}
+
