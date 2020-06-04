@@ -239,6 +239,37 @@ html {
   font-size: 62.5%;
 }
 
+h1,
+h2,
+h3 {
+  font-family: 'Cormorant SC', serif;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 10rem;
+}
+
+h2,
+h3 {
+  font-size: 6rem;
+}
+
+p {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 2.5rem;
+}
+
+.energy p {
+  font-family: 'Cormorant SC', serif;
+  font-size: 3.5rem;
+}
+
+button {
+  font-family: 'Cormorant SC', serif;
+  font-size: 4rem;
+}
+
 .wrapper {
   max-width: 1140px;
   width: 80%;
@@ -250,49 +281,30 @@ img {
   width: 100%;
 }
 
-h1,
-h2,
-h3 {
-  font-family: 'Cormorant SC', serif;
-  text-transform: uppercase;
-  text-shadow: 3px 3px 10px white;
-}
-
-h1 {
-  font-size: 10rem;
-  color: #bbbbbb;
-}
-
-h2,
-h3 {
-  font-size: 6rem;
-  color: white;
-}
-
-p {
-  font-family: 'Architects Daughter', cursive;
-  font-size: 2.5rem;
-  color: white;
-  text-shadow: 3px 3px 10px black;
-}
-
-.energy p {
-  font-family: 'Cormorant SC', serif;
-  font-size: 3.5rem;
-  color: whitesmoke;
-  border: 3px solid whitesmoke;
-}
-
-button {
-  font-family: 'Cormorant SC', serif;
-  font-size: 4rem;
-}
-
 body {
   background-image: url(../assets/bodyBackground.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  text-shadow: 3px 3px 10px white;
+}
+
+h1 {
+  color: #bbbbbb;
+}
+
+h2,
+h3 {
+  color: white;
+}
+
+p {
+  color: whitesmoke;
 }
 
 img,
@@ -335,6 +347,17 @@ button:active {
           align-items: center;
 }
 
+.intro,
+.endMessage {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+.endMessage {
+  text-align: center;
+}
+
 .creatureImage {
   width: 45%;
 }
@@ -370,6 +393,10 @@ button:active {
   text-align: center;
 }
 
+.energy p {
+  border: 3px solid whitesmoke;
+}
+
 @media (max-width: 1150px) {
   h1 {
     text-align: center;
@@ -392,6 +419,14 @@ button:active {
     font-size: 4rem;
     text-align: center;
   }
+  button {
+    margin-bottom: 10%;
+    font-size: 3.5rem;
+  }
+  .homeBtn {
+    width: 80%;
+    margin-top: 0;
+  }
   .intro {
     overflow-y: scroll;
     height: 50vh;
@@ -407,14 +442,6 @@ button:active {
   }
   .energy p {
     font-size: 3rem;
-  }
-  button {
-    margin-bottom: 10%;
-    font-size: 3.5rem;
-  }
-  .homeBtn {
-    width: 80%;
-    margin-top: 50px;
   }
   .endMessage {
     text-align: center;
