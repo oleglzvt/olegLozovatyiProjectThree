@@ -77,6 +77,10 @@ button {
     border-radius: 10px;
 }
 
+.intro {
+    line-height: 1.4;
+}
+
 .endMessage {
     text-align: center;
 }
@@ -150,6 +154,7 @@ button {
     .intro {
         overflow-y: scroll;
         height: 50vh;
+        line-height: 1.3;
     }
 
     .playArea {
